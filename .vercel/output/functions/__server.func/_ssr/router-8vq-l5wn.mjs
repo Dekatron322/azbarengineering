@@ -33,7 +33,7 @@ function reportLovableError(error, context = {}) {
     }
   );
 }
-const url = "/__l5e/assets-v1/66b8dcaa-d755-4d86-bf3d-fba1712a6dbf/azbar-logo.png";
+const url = "https://preview--azbarengineeringcom.lovable.app/__l5e/assets-v1/66b8dcaa-d755-4d86-bf3d-fba1712a6dbf/azbar-logo.png";
 const azbarLogo = {
   url
 };
@@ -47,28 +47,34 @@ const links = [
 ];
 function Header() {
   const [open, setOpen] = reactExports.useState(false);
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("header", { className: "sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x flex h-16 items-center justify-between", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("header", {
+    className: "sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", {
+      className: "container-x flex h-16 items-center justify-between", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/", className: "flex items-center gap-2 group", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: azbarLogo.url, alt: "Azbar Engineering Services Limited", className: "h-9 w-auto" }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("nav", { className: "hidden md:flex items-center gap-7", children: links.map((l) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-        Link,
-        {
-          to: l.to,
-          className: "text-sm text-muted-foreground transition-colors hover:text-foreground",
-          activeProps: { className: "text-foreground" },
-          activeOptions: { exact: l.to === "/" },
-          children: l.label
-        },
-        l.to
-      )) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "hidden md:block", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-        Link,
-        {
-          to: "/contact",
-          className: "inline-flex items-center bg-ember px-4 py-2 text-sm font-medium text-ember-foreground transition-transform hover:-translate-y-0.5",
-          children: "Get a quote"
-        }
-      ) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("nav", {
+        className: "hidden md:flex items-center gap-7", children: links.map((l) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+          Link,
+          {
+            to: l.to,
+            className: "text-sm text-muted-foreground transition-colors hover:text-foreground",
+            activeProps: { className: "text-foreground" },
+            activeOptions: { exact: l.to === "/" },
+            children: l.label
+          },
+          l.to
+        ))
+      }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", {
+        className: "hidden md:block", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+          Link,
+          {
+            to: "/contact",
+            className: "inline-flex items-center bg-ember px-4 py-2 text-sm font-medium text-ember-foreground transition-transform hover:-translate-y-0.5",
+            children: "Get a quote"
+          }
+        )
+      }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(
         "button",
         {
@@ -78,91 +84,129 @@ function Header() {
           children: open ? /* @__PURE__ */ jsxRuntimeExports.jsx(X, { className: "h-5 w-5" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Menu, { className: "h-5 w-5" })
         }
       )
-    ] }),
-    open && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "md:hidden border-t border-border bg-background", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "container-x flex flex-col py-4", children: [
-      links.map((l) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-        Link,
-        {
-          to: l.to,
-          onClick: () => setOpen(false),
-          className: "py-2 text-sm text-muted-foreground",
-          activeProps: { className: "text-ember" },
-          activeOptions: { exact: l.to === "/" },
-          children: l.label
-        },
-        l.to
-      )),
+      ]
+    }),
+      open && /* @__PURE__ */ jsxRuntimeExports.jsx("div", {
+        className: "md:hidden border-t border-border bg-background", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", {
+          className: "container-x flex flex-col py-4", children: [
+            links.map((l) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+              Link,
+              {
+                to: l.to,
+                onClick: () => setOpen(false),
+                className: "py-2 text-sm text-muted-foreground",
+                activeProps: { className: "text-ember" },
+                activeOptions: { exact: l.to === "/" },
+                children: l.label
+              },
+              l.to
+            )),
       /* @__PURE__ */ jsxRuntimeExports.jsx(
-        Link,
-        {
-          to: "/contact",
-          onClick: () => setOpen(false),
-          className: "mt-3 inline-flex items-center justify-center bg-ember px-4 py-2 text-sm font-medium text-ember-foreground",
-          children: "Get a quote"
-        }
-      )
-    ] }) })
-  ] });
+              Link,
+              {
+                to: "/contact",
+                onClick: () => setOpen(false),
+                className: "mt-3 inline-flex items-center justify-center bg-ember px-4 py-2 text-sm font-medium text-ember-foreground",
+                children: "Get a quote"
+              }
+            )
+          ]
+        })
+      })
+    ]
+  });
 }
 function Footer() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("footer", { className: "border-t border-border bg-surface/40 mt-24", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x py-16 grid gap-10 md:grid-cols-4", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "md:col-span-2", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("footer", {
+    className: "border-t border-border bg-surface/40 mt-24", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", {
+      className: "container-x py-16 grid gap-10 md:grid-cols-4", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", {
+        className: "md:col-span-2", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center gap-2", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: azbarLogo.url, alt: "Azbar Engineering Services Limited", className: "h-10 w-auto" }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 max-w-md text-sm text-muted-foreground", children: "MEPF consulting — design powered by BIM technology, delivered with rigorous site supervision. Buildings that work, from drawing to commissioning." })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        ]
+      }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", {
+        children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-xs uppercase tracking-[0.2em] text-muted-foreground", children: "Navigate" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "mt-4 space-y-2 text-sm", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", {
+          className: "mt-4 space-y-2 text-sm", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/about", className: "hover:text-ember", children: "About" }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/services", className: "hover:text-ember", children: "Services" }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/projects", className: "hover:text-ember", children: "Projects" }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/team", className: "hover:text-ember", children: "Team" }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/contact", className: "hover:text-ember", children: "Contact" }) })
-        ] })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+          ]
+        })
+        ]
+      }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", {
+        children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-xs uppercase tracking-[0.2em] text-muted-foreground", children: "Contact" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "mt-4 space-y-3 text-sm text-muted-foreground", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-start gap-2", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", {
+          className: "mt-4 space-y-3 text-sm text-muted-foreground", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("li", {
+            className: "flex items-start gap-2", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(Mail, { className: "h-4 w-4 mt-0.5 text-ember" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "info@azbarengineering.com" })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-start gap-2", children: [
+            ]
+          }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("li", {
+            className: "flex items-start gap-2", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { className: "h-4 w-4 mt-0.5 text-ember" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "+2348103173481" })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-start gap-2", children: [
+            ]
+          }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("li", {
+            className: "flex items-start gap-2", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(MapPin, { className: "h-4 w-4 mt-0.5 text-ember" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "No. 4. Victor A. Morris Street, Mabushi Abuja, FCT, Nig." })
-          ] })
-        ] })
-      ] })
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "border-t border-border", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x py-6 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-muted-foreground", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
-        "© ",
-        (/* @__PURE__ */ new Date()).getFullYear(),
-        " Azbar Engineering Services Limited. All rights reserved."
-      ] }),
+            ]
+          })
+          ]
+        })
+        ]
+      })
+      ]
+    }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", {
+      className: "border-t border-border", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", {
+        className: "container-x py-6 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-muted-foreground", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("span", {
+          children: [
+            "© ",
+            (/* @__PURE__ */ new Date()).getFullYear(),
+            " Azbar Engineering Services Limited. All rights reserved."
+          ]
+        }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "MEPF · BIM · Supervision" })
-    ] }) })
-  ] });
+        ]
+      })
+    })
+    ]
+  });
 }
 function NotFoundComponent() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex min-h-screen items-center justify-center bg-background px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-md text-center", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", {
+    className: "flex min-h-screen items-center justify-center bg-background px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", {
+      className: "max-w-md text-center", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-7xl font-bold text-foreground", children: "404" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "mt-4 text-xl font-semibold text-foreground", children: "Page not found" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm text-muted-foreground", children: "The page you're looking for doesn't exist or has been moved." }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Link,
-      {
-        to: "/",
-        className: "inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90",
-        children: "Go home"
-      }
-    ) })
-  ] }) });
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", {
+        className: "mt-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+          Link,
+          {
+            to: "/",
+            className: "inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90",
+            children: "Go home"
+          }
+        )
+      })
+      ]
+    })
+  });
 }
 function ErrorComponent({ error, reset }) {
   console.error(error);
@@ -170,31 +214,37 @@ function ErrorComponent({ error, reset }) {
   reactExports.useEffect(() => {
     reportLovableError(error, { boundary: "tanstack_root_error_component" });
   }, [error]);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex min-h-screen items-center justify-center bg-background px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-md text-center", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", {
+    className: "flex min-h-screen items-center justify-center bg-background px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", {
+      className: "max-w-md text-center", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-xl font-semibold tracking-tight text-foreground", children: "This page didn't load" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm text-muted-foreground", children: "Something went wrong on our end. You can try refreshing or head back home." }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-6 flex flex-wrap justify-center gap-2", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", {
+        className: "mt-6 flex flex-wrap justify-center gap-2", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "button",
-        {
-          onClick: () => {
-            router2.invalidate();
-            reset();
-          },
-          className: "inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90",
-          children: "Try again"
-        }
-      ),
+          "button",
+          {
+            onClick: () => {
+              router2.invalidate();
+              reset();
+            },
+            className: "inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90",
+            children: "Try again"
+          }
+        ),
       /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "a",
-        {
-          href: "/",
-          className: "inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent",
-          children: "Go home"
-        }
-      )
-    ] })
-  ] }) });
+          "a",
+          {
+            href: "/",
+            className: "inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent",
+            children: "Go home"
+          }
+        )
+        ]
+      })
+      ]
+    })
+  });
 }
 const Route$7 = createRootRouteWithContext()({
   head: () => ({
@@ -230,21 +280,29 @@ const Route$7 = createRootRouteWithContext()({
   errorComponent: ErrorComponent
 });
 function RootShell({ children }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("html", { lang: "en", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("html", {
+    lang: "en", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("head", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(HeadContent, {}) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("body", { children: [
-      children,
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("body", {
+      children: [
+        children,
       /* @__PURE__ */ jsxRuntimeExports.jsx(Scripts, {})
-    ] })
-  ] });
+      ]
+    })
+    ]
+  });
 }
 function RootComponent() {
   const { queryClient } = Route$7.useRouteContext();
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(QueryClientProvider, { client: queryClient, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex min-h-screen flex-col", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(QueryClientProvider, {
+    client: queryClient, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", {
+      className: "flex min-h-screen flex-col", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(Header, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx("main", { className: "flex-1", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Outlet, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Footer, {})
-  ] }) });
+      ]
+    })
+  });
 }
 const $$splitComponentImporter$5 = () => import("./team-C0NvjoJf.mjs");
 const Route$6 = createFileRoute("/team")({
